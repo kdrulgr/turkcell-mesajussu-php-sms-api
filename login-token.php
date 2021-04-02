@@ -20,9 +20,8 @@ $token = $sonuc_dizi[3]; // dizinin 3 numaralı indisi bize lazım olan token. D
 
 $tarih = date('Y-m-d H:i:s'); // veritabanına kaydederken son alınan tarih saatide kaydedelim 
 
-$db->exec("UPDATE smsToken SET token='{$token}', tarih='{$tarih}' WHERE id ='1' "); // 
+$db->exec("UPDATE smsToken SET token='{$token}', tarih='{$tarih}' WHERE id ='1' ");
 // NOT: alınan token ve tarih bilgisini veritabanına yeni kayıt olarak eklemeyin. 
 // Tabloyu oluşturduğunuzda manuel olarak bir kayıt açın ve hep onu güncelleyin.
 ?>
-
 <center>smsToken oluşturulup kaydedildi.<br><?=$tarih;?></center>
